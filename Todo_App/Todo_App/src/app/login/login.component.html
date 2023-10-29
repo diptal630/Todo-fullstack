@@ -1,0 +1,17 @@
+<!-- Two Way Data Binding[(NgModel)]='username'-->
+<!-- Event Binding -> click()-->
+<!-- interpolation it ties views-> to value of property-->
+
+<h2 >Login</h2>
+<div class ="container"></div>
+<div class="alert alert-warning" *ngIf='invalidLogin'>{{errorMessage}}</div>
+
+<div>
+UserName : <input type="text"  name="username" [(ngModel)]="username"  >
+Password : <input type="password" name="password" [(ngModel)]="password">
+<br>
+<br>
+</div>
+<div class="loginbutton" >
+<button  class="button  button-success"  (click)=handleLogin()>Login</button>
+</div>
